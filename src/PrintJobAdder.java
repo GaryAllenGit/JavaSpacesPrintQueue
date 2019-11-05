@@ -80,7 +80,7 @@ public class PrintJobAdder extends JFrame {
 
 			// if there is no QueueStatus object in the space then we can't do much, so print an error and exit
 			if (qStatus == null){
-				System.out.println("No QueueStatus object found.  Has 'StartPrintQueue' been run?");
+				System.out.println("No " + qsTemplate.getClass().getName() + " object found.  Has 'StartPrintQueue' been run?");
 				System.exit(1);
 			}
 

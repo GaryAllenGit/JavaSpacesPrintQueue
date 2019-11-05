@@ -21,14 +21,14 @@ public class StartPrintQueue{
                 try {
                     QueueStatus qs = new QueueStatus(0);
                     space.write(qs, null, Lease.FOREVER);
-                    System.out.println("QueueStatus object added to space");
+                    System.out.println(template.getClass().getName() + " object added to space");
                     System.exit(0);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             } else {
                 // there is already an object available, so don't create one
-                System.out.println("QueueStatus object is already in the space");
+                System.out.println(template.getClass().getName() + " object is already in the space");
                 System.exit(1);
             }
 
